@@ -15,8 +15,15 @@ public class Test1_Yahoo {
 
         driver.get("https:www.yahoo.com");
 
-        String currenttitle=driver.getTitle();
-        System.out.println("currenttitle = " + currenttitle);
+        String expectedTitle="Yahoo";
+
+        String actualTitle= driver.getTitle();
+
+        if(expectedTitle.equals(actualTitle)){
+            System.out.println("Title is expected. Verification PASSED");
+        }else{
+            System.out.println("Title is NOT expected. Verification FAILED");
+        }
 
 
     }
