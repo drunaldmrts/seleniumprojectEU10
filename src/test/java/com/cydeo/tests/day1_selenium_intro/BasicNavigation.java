@@ -10,7 +10,11 @@ public class BasicNavigation {
 
         WebDriverManager.chromedriver().setup();
 
+        // this is the line opening empty browser
         WebDriver driver=new ChromeDriver();
+
+        // this line will maximize the page
+        driver.manage().window().maximize();
 
         driver.get("https:tesla.com");
         
