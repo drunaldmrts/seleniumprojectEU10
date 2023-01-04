@@ -15,6 +15,7 @@ public class BasicNavigation {
 
         // this line will maximize the page
         driver.manage().window().maximize();
+        // driver.manage().window().fullscreen(); this is for mac
 
         driver.get("https:tesla.com");
         
@@ -51,6 +52,16 @@ public class BasicNavigation {
         //driver.getCurrentUrl();
         String currentURL= driver.getCurrentUrl();
         System.out.println("currentURL = " + currentURL);
+
+
+        // this will close the currently opened window
+        // if we have more than one windows, it will only close the one that was focused on
+        driver.close();
+
+
+        // it will kill the session
+        // if we have more than one window, everything will be closed
+        driver.quit();
 
 
 
