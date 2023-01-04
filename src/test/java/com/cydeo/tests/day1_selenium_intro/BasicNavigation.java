@@ -13,6 +13,10 @@ public class BasicNavigation {
         WebDriver driver=new ChromeDriver();
 
         driver.get("https:tesla.com");
+        
+        // get the title 
+        String currenttitle= driver.getTitle();
+        System.out.println("currenttitle = " + currenttitle);
 
         // stop code execution 3 seconds
         Thread.sleep(3000);
@@ -38,6 +42,11 @@ public class BasicNavigation {
         // get the title of the page
         //driver.getTitle();
         System.out.println(driver.getTitle());
+
+        // get current URL
+        //driver.getCurrentUrl();
+        String currentURL= driver.getCurrentUrl();
+        System.out.println("currentURL = " + currentURL);
 
 
     }
