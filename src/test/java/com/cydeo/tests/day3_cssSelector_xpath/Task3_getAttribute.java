@@ -24,5 +24,13 @@ public class Task3_getAttribute {
         //WebElement logInButton= driver.findElement(By.cssSelector("input[type='submit']"));
         WebElement logInButton= driver.findElement(By.cssSelector("input[value='Log In']"));
 
+        String expectedButton="Log In";
+        String actualButton=logInButton.getAttribute("value");
+
+        if(actualButton.equals(expectedButton)){
+            System.out.println("PASSED");
+        }else {
+            System.out.println("FAILED!!!");
+        }
     }
 }
