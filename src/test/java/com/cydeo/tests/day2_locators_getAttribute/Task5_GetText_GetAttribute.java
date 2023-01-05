@@ -24,7 +24,18 @@ public class Task5_GetText_GetAttribute {
             System.out.println("FAILED!!!");
         }
 
+         WebElement firstName= driver.findElement(By.name("firstname"));
 
+        String expectedPlaceHolder="first name";
+        String actualPlaceHolder=firstName.getAttribute("placeholder");
+
+        if (actualPlaceHolder.equals(expectedPlaceHolder)){
+            System.out.println("PASSED");
+        }else{
+            System.out.println("FAILED!!");
+        }
+
+        driver.close();
 
     }
 }
