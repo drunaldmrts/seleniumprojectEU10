@@ -20,5 +20,30 @@ public class Task2_LinkTextPractice {
         WebElement abTestLink=driver.findElement(By.linkText("A/B Testing"));
         abTestLink.click();
 
+        // Verify the title
+        String expectedTitle="No A/B Testing";
+        String actualTitle= driver.getTitle();
+
+        if(expectedTitle.equals(actualTitle)){
+            System.out.println("PASSED");
+        }else{
+            System.out.println("FAILED!!");
+        }
+
+        // Go back to home page by using back()
+        driver.navigate().back();
+
+        // Verify title
+        expectedTitle="Practice";
+        actualTitle= driver.getTitle();
+
+        if(expectedTitle.equals(actualTitle)){
+            System.out.println("PASSED");
+        }else{
+            System.out.println("FAILED!!");
+        }
+
+        driver.close();
+
     }
 }
