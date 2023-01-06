@@ -28,7 +28,7 @@ public class Task4_FindElements {
         //6- Print out the HREF attribute values of the links
         for (WebElement each : allLinks) {
 
-            System.out.println("Test of link: "+each.getText());
+            System.out.println("Text of link: "+each.getText());
             System.out.println("HREF Text: "+ each.getAttribute("href") );
         }
 
