@@ -25,10 +25,13 @@ public class Task4_FindElements {
         System.out.println("allLinks.size() = " + allLinks.size());
 
         //5- Print out the texts of the links.
+        //6- Print out the HREF attribute values of the links
         for (WebElement each : allLinks) {
+
             System.out.println("Test of link: "+each.getText());
+            System.out.println("HREF Text: "+ each.getAttribute("href") );
         }
 
-        //6- Print out the HREF attribute values of the links
+
     }
 }
