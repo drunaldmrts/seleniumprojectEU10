@@ -29,6 +29,7 @@ public class TestNG_Selenium {
     public void tearDownMethod(){
         driver.close();
     }
+
     @Test
     public void selenium_test(){
 
