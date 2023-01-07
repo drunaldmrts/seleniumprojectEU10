@@ -23,7 +23,7 @@ public class TestNG_Intro {
         String expected="apple";
 
         //ASSERT TRUE
-        Assert.assertTrue(actual.equals(expected));
+        Assert.assertTrue(actual.equals(expected),"your message goes here");
     }
 
 
