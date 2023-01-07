@@ -19,6 +19,7 @@ public class Task2_radiobutton {
         //3. Click to “Hockey” radio button
         WebElement hockeyButton= driver.findElement(By.xpath("//input[@id='hockey']"));
         hockeyButton.click();
+        
 
         //4. Verify “Hockey” radio button is selected after clicking.
         if(hockeyButton.isSelected()){
