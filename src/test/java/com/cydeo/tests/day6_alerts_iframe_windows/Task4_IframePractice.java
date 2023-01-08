@@ -19,7 +19,7 @@ WebDriver driver;
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://practice.cydeo.com/iframe");
     }
-
+    //@Ignore for skip the test
     @Test
     public void iframeTask(){
 
