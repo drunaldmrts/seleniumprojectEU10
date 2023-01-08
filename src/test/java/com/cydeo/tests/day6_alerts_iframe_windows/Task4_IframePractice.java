@@ -27,6 +27,8 @@ WebDriver driver;
         //driver.switchTo().frame("mce_0_ifr");---> option1 switch to using id attribute
         //option2 switch to frame using index
         driver.switchTo().frame(0);
+        //option 3 using web element
+        //driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']")))
 
         //locate p tag
         WebElement contentText= driver.findElement(By.xpath("//p"));
