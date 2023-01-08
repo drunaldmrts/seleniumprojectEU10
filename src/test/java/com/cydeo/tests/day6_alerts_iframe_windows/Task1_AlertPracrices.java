@@ -61,4 +61,5 @@ WebDriver driver;
 
         Assert.assertTrue(resultText.isDisplayed());
     }
+
 }
