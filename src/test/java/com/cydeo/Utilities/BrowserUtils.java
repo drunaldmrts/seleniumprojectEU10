@@ -8,7 +8,7 @@ import java.util.Set;
 /*
 In this class only general utility methods that are not releated to some specific page
  */
-public class BrowserUtilities {
+public class BrowserUtils {
 
     /*
     This method will accept int (in second) and execute Thread.sleep for given duration
