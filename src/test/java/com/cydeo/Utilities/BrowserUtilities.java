@@ -1,6 +1,7 @@
 package com.cydeo.Utilities;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import java.util.Set;
 
@@ -39,6 +40,8 @@ public class BrowserUtilities {
 
         }
         String actualTitle= driver.getTitle();
+
+        Assert.assertTrue(actualTitle.contains(expectedTitle));
 
     }
 }
