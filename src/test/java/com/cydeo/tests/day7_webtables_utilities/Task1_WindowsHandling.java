@@ -1,9 +1,9 @@
 package com.cydeo.tests.day7_webtables_utilities;
 
+import com.cydeo.Utilities.BrowserUtils;
 import com.cydeo.Utilities.WebDriverFactory;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -30,26 +30,8 @@ public class Task1_WindowsHandling {
         ((JavascriptExecutor) driver).executeScript("window.open('http://facebook.com','_blank');");
 
         //4. Create a logic to switch to the tab where Etsy.com is open
-        //Set<String> WindowHandle=driver.getWindowHandles();
-        //WindowHandle
-        for (String each : driver.getWindowHandles()) {
 
-            driver.switchTo().window(each);
-
-            System.out.println("Current URL = " + driver.getCurrentUrl());
-
-            if (driver.getCurrentUrl().contains("etsy")) {
-                break;
-            }
-
-        }
-        //5. Assert: Title contains “Etsy”
-
-        String actualTitle=driver.getTitle();
-        String expectedTitle="Etsy";
-
-        Assert.assertTrue(actualTitle.contains(expectedTitle));
-
+        BrowserUtils.switchWindowAndVerify(driver,"etsy","Etsy");
     }
 }
 
