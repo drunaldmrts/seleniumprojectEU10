@@ -24,6 +24,13 @@ public class BrowserUtils {
         }
     }
 
+    /*
+    This method accepts 3 arguments
+    1-webdriver
+    2-expectedinUrl--> for verify if the url contains given String
+    3-expectedTitle--> to be compared with actual title
+     */
+
     public static void switchWindowAndVerify(WebDriver driver, String expectedInUrl, String expectedTitle){
 
         Set<String> allWindowHandles=driver.getWindowHandles();
@@ -53,6 +60,9 @@ public class BrowserUtils {
 
         Assert.assertEquals(driver.getTitle(), expectedTitle);
     }
+
+
+
 
 
 }
