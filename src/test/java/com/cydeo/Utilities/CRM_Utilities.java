@@ -23,8 +23,15 @@ public class CRM_Utilities {
         WebElement logIn = driver.findElement(By.xpath("//input[@value='Log In']"));
         logIn.click();
 
+    }
+    public static void crm_login(WebDriver driver, String username, String password) {
+        //3. Enter valid username
+        WebElement inputUsername = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
+        inputUsername.sendKeys(username);
 
-
+        //4. Enter valid password
+        WebElement inputPassword = driver.findElement(By.cssSelector("input[name='USER_PASSWORD']"));
+        inputPassword.sendKeys(password);
 
     }
 }
