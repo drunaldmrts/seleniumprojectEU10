@@ -9,6 +9,8 @@ public class JavaFakerPractice {
     public void test1(){
 
         Faker faker=new Faker();
+        //Faker faker = new Faker(new Locale("tr"));
+
         System.out.println("faker.name().firstName() = " + faker.name().firstName());
         System.out.println("faker.name.lastName() = " + faker.name().lastName());
 
@@ -19,5 +21,7 @@ public class JavaFakerPractice {
         System.out.println("faker.letterify(\"????-???\") = " + faker.letterify("??????"));
 
         System.out.println("faker.bothify(\"???###?#??##\") = " + faker.bothify("???###?#??##"));
+
+        System.out.println("faker.chuckNorris() = " + faker.chuckNorris());
     }
 }
