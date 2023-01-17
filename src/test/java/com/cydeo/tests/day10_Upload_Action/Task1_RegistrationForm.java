@@ -6,6 +6,7 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Task1_RegistrationForm {
@@ -73,7 +74,7 @@ public class Task1_RegistrationForm {
         //15. Verify success message “You’ve successfully completed registration.” is
         //displayed.
         WebElement message=Driver.getDriver().findElement(By.tagName("p"));
-        message.isDisplayed();
+        Assert.assertTrue(message.isDisplayed());
 
     }
 }
