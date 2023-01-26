@@ -1,6 +1,7 @@
 package com.cydeo.tests.day8_properties;
 
 import com.cydeo.Utilities.WebDriverFactory;
+import com.cydeo.Utilities.WebTableUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,6 +41,14 @@ public class Task1_WebTable {
         String actualOrderDate=bobOrderDate.getText();
 
         Assert.assertEquals(actualOrderDate,expectedOrderDate);
+
+    }
+
+    @Test
+    public void test2(){
+        String customerOrderDate1=WebTableUtils.returnOrderDate(driver,"Alexandra Gray");
+
+        System.out.println("customerOrderDate1 = " + customerOrderDate1);
 
     }
 }
