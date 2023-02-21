@@ -2,6 +2,7 @@ package com.cydeo.tests.day12_PageObjectModel;
 
 import com.cydeo.Utilities.Driver;
 import com.cydeo.pages.LibraryLoginPage;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class POM_Practices {
@@ -16,8 +17,10 @@ public class POM_Practices {
         //4- Click to “Sign in” button
         LibraryLoginPage libraryLoginPage=new LibraryLoginPage;
 
-        
+        libraryLoginPage.signInButton.click();
+
         //5- Verify expected error is displayed:
+        Assert.assertTrue(libraryLoginPage.fieldRequiredErrorMessage.isDisplayed());
 
     }
 }
